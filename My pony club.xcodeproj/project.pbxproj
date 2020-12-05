@@ -37,6 +37,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5934CB5257C18220010FC75 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				E5BE80FC255D47FA007EE47E /* AppDelegate.swift */,
+				E5BE80FE255D47FA007EE47E /* SceneDelegate.swift */,
+				E5BE810A255D47FC007EE47E /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		E5BE80F0255D47FA007EE47E = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +66,11 @@
 		E5BE80FB255D47FA007EE47E /* My pony club */ = {
 			isa = PBXGroup;
 			children = (
-				E5BE80FC255D47FA007EE47E /* AppDelegate.swift */,
-				E5BE80FE255D47FA007EE47E /* SceneDelegate.swift */,
+				E5934CB5257C18220010FC75 /* Supporting files */,
 				E5BE8100255D47FA007EE47E /* ViewController.swift */,
 				E5BE8102255D47FA007EE47E /* Main.storyboard */,
 				E5BE8105255D47FC007EE47E /* Assets.xcassets */,
 				E5BE8107255D47FC007EE47E /* LaunchScreen.storyboard */,
-				E5BE810A255D47FC007EE47E /* Info.plist */,
 			);
 			path = "My pony club";
 			sourceTree = "<group>";
@@ -94,7 +102,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Nikita Kochetov";
 				TargetAttributes = {
 					E5BE80F8255D47FA007EE47E = {
@@ -192,6 +200,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -252,6 +261,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -286,7 +296,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z4HK5Y82J4;
-				INFOPLIST_FILE = "My pony club/Info.plist";
+				INFOPLIST_FILE = "My pony club/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +305,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "nikko.My-pony-club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +315,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z4HK5Y82J4;
-				INFOPLIST_FILE = "My pony club/Info.plist";
+				INFOPLIST_FILE = "My pony club/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "nikko.My-pony-club";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

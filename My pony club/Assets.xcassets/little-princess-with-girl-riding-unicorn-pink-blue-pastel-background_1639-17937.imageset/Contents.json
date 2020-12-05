@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "little-princess-with-girl-riding-unicorn-pink-blue-pastel-background_1639-17937.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
