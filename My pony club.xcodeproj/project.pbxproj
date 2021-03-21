@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		148B93AAA8A0EC5CDBFE1285 /* Pods_My_pony_club.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5001B5CE6E2D706B555A9718 /* Pods_My_pony_club.framework */; };
+		E569A1AD260786090062492B /* PonyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569A1AC260786090062492B /* PonyModel.swift */; };
+		E569A1B026079CD70062492B /* NewPonyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569A1AF26079CD70062492B /* NewPonyTableViewController.swift */; };
+		E5A34ABA260531EA000F60BB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A34AB9260531EA000F60BB /* CustomTableViewCell.swift */; };
+		E5A383992604C24D00EC70C1 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A383982604C24D00EC70C1 /* MainTableViewController.swift */; };
 		E5BE80FD255D47FA007EE47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BE80FC255D47FA007EE47E /* AppDelegate.swift */; };
 		E5BE80FF255D47FA007EE47E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BE80FE255D47FA007EE47E /* SceneDelegate.swift */; };
 		E5BE8101255D47FA007EE47E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BE8100255D47FA007EE47E /* ViewController.swift */; };
@@ -16,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40C19D0EB1941219CF5A7D4C /* Pods-My pony club.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My pony club.debug.xcconfig"; path = "Target Support Files/Pods-My pony club/Pods-My pony club.debug.xcconfig"; sourceTree = "<group>"; };
+		5001B5CE6E2D706B555A9718 /* Pods_My_pony_club.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_pony_club.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B862274FB471E0FA1429AC86 /* Pods-My pony club.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My pony club.release.xcconfig"; path = "Target Support Files/Pods-My pony club/Pods-My pony club.release.xcconfig"; sourceTree = "<group>"; };
+		E569A1AC260786090062492B /* PonyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PonyModel.swift; sourceTree = "<group>"; };
+		E569A1AF26079CD70062492B /* NewPonyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPonyTableViewController.swift; sourceTree = "<group>"; };
+		E5A34AB9260531EA000F60BB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		E5A383982604C24D00EC70C1 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		E5BE80F9255D47FA007EE47E /* My pony club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My pony club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5BE80FC255D47FA007EE47E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5BE80FE255D47FA007EE47E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,12 +43,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				148B93AAA8A0EC5CDBFE1285 /* Pods_My_pony_club.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		216D33551AFCF052384F67AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40C19D0EB1941219CF5A7D4C /* Pods-My pony club.debug.xcconfig */,
+				B862274FB471E0FA1429AC86 /* Pods-My pony club.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E5934CB5257C18220010FC75 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
@@ -47,11 +70,49 @@
 			path = "Supporting files";
 			sourceTree = "<group>";
 		};
+		E5934CB9257C19E50010FC75 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E5BE8102255D47FA007EE47E /* Main.storyboard */,
+				E5BE8107255D47FC007EE47E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E5934CBA257C19F70010FC75 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E5BE8105255D47FC007EE47E /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E5934CBC257C1BA40010FC75 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E5BE8100255D47FA007EE47E /* ViewController.swift */,
+				E5A383982604C24D00EC70C1 /* MainTableViewController.swift */,
+				E5A34AB9260531EA000F60BB /* CustomTableViewCell.swift */,
+				E569A1AF26079CD70062492B /* NewPonyTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E5934CBF257C1DF10010FC75 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E569A1AC260786090062492B /* PonyModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E5BE80F0255D47FA007EE47E = {
 			isa = PBXGroup;
 			children = (
 				E5BE80FB255D47FA007EE47E /* My pony club */,
 				E5BE80FA255D47FA007EE47E /* Products */,
+				E5F7A9D12580083300CCBD7D /* Frameworks */,
+				216D33551AFCF052384F67AA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,13 +127,21 @@
 		E5BE80FB255D47FA007EE47E /* My pony club */ = {
 			isa = PBXGroup;
 			children = (
+				E5934CBC257C1BA40010FC75 /* ViewControllers */,
+				E5934CBF257C1DF10010FC75 /* Models */,
+				E5934CB9257C19E50010FC75 /* Storyboards */,
 				E5934CB5257C18220010FC75 /* Supporting files */,
-				E5BE8100255D47FA007EE47E /* ViewController.swift */,
-				E5BE8102255D47FA007EE47E /* Main.storyboard */,
-				E5BE8105255D47FC007EE47E /* Assets.xcassets */,
-				E5BE8107255D47FC007EE47E /* LaunchScreen.storyboard */,
+				E5934CBA257C19F70010FC75 /* Sources */,
 			);
 			path = "My pony club";
+			sourceTree = "<group>";
+		};
+		E5F7A9D12580083300CCBD7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5001B5CE6E2D706B555A9718 /* Pods_My_pony_club.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5BE810D255D47FC007EE47E /* Build configuration list for PBXNativeTarget "My pony club" */;
 			buildPhases = (
+				B96585E325CFEB087A6BD34F /* [CP] Check Pods Manifest.lock */,
 				E5BE80F5255D47FA007EE47E /* Sources */,
 				E5BE80F6255D47FA007EE47E /* Frameworks */,
 				E5BE80F7255D47FA007EE47E /* Resources */,
+				6E70F01209B3614209845A58 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,11 +212,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E70F01209B3614209845A58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My pony club/Pods-My pony club-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My pony club/Pods-My pony club-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-My pony club/Pods-My pony club-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B96585E325CFEB087A6BD34F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My pony club-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E5BE80F5255D47FA007EE47E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5A383992604C24D00EC70C1 /* MainTableViewController.swift in Sources */,
+				E569A1AD260786090062492B /* PonyModel.swift in Sources */,
+				E5A34ABA260531EA000F60BB /* CustomTableViewCell.swift in Sources */,
+				E569A1B026079CD70062492B /* NewPonyTableViewController.swift in Sources */,
 				E5BE8101255D47FA007EE47E /* ViewController.swift in Sources */,
 				E5BE80FD255D47FA007EE47E /* AppDelegate.swift in Sources */,
 				E5BE80FF255D47FA007EE47E /* SceneDelegate.swift in Sources */,
@@ -292,6 +409,7 @@
 		};
 		E5BE810E255D47FC007EE47E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40C19D0EB1941219CF5A7D4C /* Pods-My pony club.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +429,7 @@
 		};
 		E5BE810F255D47FC007EE47E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B862274FB471E0FA1429AC86 /* Pods-My pony club.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
