@@ -10,7 +10,7 @@ import UIKit
 
 class NewPonyTableViewController: UITableViewController {
     
-    var newPony: Pony?
+    var currentPony: Pony?
     var imageIsChanged = false
     
     @IBOutlet var saveButton: UIBarButtonItem!
@@ -22,12 +22,11 @@ class NewPonyTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         tableView.tableFooterView = UIView()
-        
         saveButton.isEnabled = false
-        
         ponyName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        setupEditScreen()
     }
     // MARK: Table view Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -64,7 +63,7 @@ class NewPonyTableViewController: UITableViewController {
         }
     }
     
-    func saveNewPony() {
+    func savePony() {
         
         var image: UIImage?
         
@@ -73,13 +72,51 @@ class NewPonyTableViewController: UITableViewController {
         } else {
             image = #imageLiteral(resourceName: "imagePlaceholder")
         }
-            
-        newPony = Pony(name: ponyName.text!,
-                       location: ponyLocation.text,
-                       type: ponyType.text,
-                       image: image,
-                       ponyImage: nil)
+        
+        let imageData = image?.pngData()
+        
+        let newPony = Pony(name: ponyName.text!,
+                           location: ponyLocation.text!,
+                           type: ponyType.text!,
+                           imageData: imageData)
+        if currentPony != nil {
+            try! realm.write {
+                currentPony?.name = newPony.name
+                currentPony?.location = newPony.location
+                currentPony?.type = newPony.type
+                currentPony?.imageData = newPony.imageData
+            }
+        } else {
+            StorageManager.saveObject(newPony)
+        }
     }
+    
+    private func setupEditScreen() {
+        if currentPony != nil {
+            
+            setupNavigationBar()
+            imageIsChanged = true
+            
+            guard let data = currentPony?.imageData, let image = UIImage(data: data) else { return }
+            
+            ponyImage.image = image
+            ponyImage.contentMode = .scaleAspectFill
+            ponyName.text = currentPony?.name
+            ponyLocation.text = currentPony?.location
+            ponyType.text = currentPony?.type
+        }
+    }
+    
+    private func setupNavigationBar() {
+        if let topIteam =  navigationController?.navigationBar.topItem {
+            topIteam.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        }
+        navigationItem.leftBarButtonItem = nil
+        title = currentPony?.name
+        saveButton.isEnabled = true
+        
+    }
+    
     @IBAction func cancelAction(_ sender: Any) {
         dismiss(animated: true)
     }

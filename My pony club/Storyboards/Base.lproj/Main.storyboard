@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5999999999999" y="137.18140929535232"/>
+            <point key="canvasLocation" x="452" y="-1205"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Lfb-qZ-59s">
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRB-x9-Cm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2863.1999999999998" y="-514.09295352323841"/>
+            <point key="canvasLocation" x="2127" y="-1164"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xRf-sc-K8T">
@@ -212,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cp-FM-D6A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2863.1999999999998" y="136.28185907046478"/>
+            <point key="canvasLocation" x="2127" y="-513"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gIx-fU-gcC">
@@ -230,7 +230,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ukt-A3-Pgm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.40000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="-487" y="-1205"/>
         </scene>
         <!--My Pony-->
         <scene sceneID="Bm6-a1-38Z">
@@ -293,6 +293,7 @@
                                     <outlet property="locationLabel" destination="hNr-5H-ZKf" id="Ezh-By-zWI"/>
                                     <outlet property="nameLabel" destination="SXH-Kr-dNh" id="g1V-d5-9jh"/>
                                     <outlet property="typeLabel" destination="BOd-xJ-6fT" id="A50-tE-YKG"/>
+                                    <segue destination="lKt-8a-qmV" kind="show" identifier="showDetail" id="CcE-Ma-Ykm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -301,7 +302,8 @@
                             <outlet property="delegate" destination="Eke-Zv-FLW" id="AZR-sc-BOj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Pony" id="flF-Pv-fj5">
+                    <navigationItem key="navigationItem" title="My Pony" largeTitleDisplayMode="never" id="flF-Pv-fj5">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="DJY-iM-LbT"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SLd-t4-gn0">
                             <connections>
                                 <segue destination="Tg0-8e-CCu" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="uZg-sc-vH1"/>
@@ -458,7 +460,7 @@
                             <outlet property="delegate" destination="lKt-8a-qmV" id="Uda-6Z-qzl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Pony" id="oRQ-Jr-hgq">
+                    <navigationItem key="navigationItem" title="New Pony" largeTitleDisplayMode="always" id="oRQ-Jr-hgq">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ndb-wV-IUt">
                             <connections>
                                 <action selector="cancelAction:" destination="lKt-8a-qmV" id="TiC-BF-se6"/>
@@ -481,14 +483,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4l-AM-xJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="V2Z-dy-Zwd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="857.72113943028489"/>
+            <point key="canvasLocation" x="1294" y="858"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vPC-7t-2MM">
             <objects>
                 <navigationController id="7EN-7W-z16" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6sT-HK-272">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6sT-HK-272">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
@@ -518,10 +520,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V53-DN-leh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1272.8" y="857.72113943028489"/>
+            <point key="canvasLocation" x="1294" y="210"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="nAT-on-xp2"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="AZ" width="25" height="24"/>
         <image name="Club photo" width="1000" height="500"/>
         <image name="Photo" width="195" height="196"/>
         <systemColor name="labelColor">

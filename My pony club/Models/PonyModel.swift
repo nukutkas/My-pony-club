@@ -6,28 +6,20 @@
 //  Copyright © 2021 Nikita Kochetov. All rights reserved.
 //
 
-import UIKit
+import RealmSwift
 
-struct Pony {
-    var name: String
-    var location: String?
-    var type: String?
-    var image: UIImage?
-    var ponyImage: String?
+class Pony: Object {
+    @objc dynamic var name = ""
+    @objc dynamic var location: String?
+    @objc dynamic var type: String?
+    @objc dynamic var imageData: Data?
     
-    static let ponyNames = [
-        "Огонек", "Сабудай", "Реви Пеппер", "Контур",
-        "Геркулес", "Адам", "Лотос", "Ясон",
-        "Хэннеси", "Харлей", "Романтик", "Дик",
-        "Восторг", "Поларис", "Дарт Вейдер"
-    ]
-    
-    static func getPonies() -> [Pony] {
-        var ponies = [Pony]()
-        for pony in ponyNames {
-            ponies.append(Pony(name: pony, location: "Измайлово", type: "Пони", image : nil, ponyImage: pony))
-        }
-        
-        return ponies
+    convenience init(name: String, location: String?, type: String, imageData: Data?) {
+        self.init()
+        self.name = name
+        self.location = location
+        self.type = type
+        self.imageData = imageData
     }
+    
 }
