@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C02EE1DA1A20B6CD5DE00068 /* Pods_My_pony_club.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B08BA2592A860ED70EFDE82 /* Pods_My_pony_club.framework */; };
 		E50B6F76260A589E008A6100 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50B6F75260A589E008A6100 /* StorageManager.swift */; };
+		E5105A8E260F2FE3000232CC /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5105A8D260F2FE3000232CC /* RatingControl.swift */; };
 		E569A1AD260786090062492B /* PonyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569A1AC260786090062492B /* PonyModel.swift */; };
 		E569A1B026079CD70062492B /* NewPonyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569A1AF26079CD70062492B /* NewPonyTableViewController.swift */; };
 		E5A34ABA260531EA000F60BB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A34AB9260531EA000F60BB /* CustomTableViewCell.swift */; };
@@ -26,6 +27,7 @@
 		5B08BA2592A860ED70EFDE82 /* Pods_My_pony_club.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_pony_club.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D54E43724FA6F7D42DAFA3 /* Pods-My pony club.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My pony club.release.xcconfig"; path = "Target Support Files/Pods-My pony club/Pods-My pony club.release.xcconfig"; sourceTree = "<group>"; };
 		E50B6F75260A589E008A6100 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		E5105A8D260F2FE3000232CC /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		E569A1AC260786090062492B /* PonyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PonyModel.swift; sourceTree = "<group>"; };
 		E569A1AF26079CD70062492B /* NewPonyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPonyTableViewController.swift; sourceTree = "<group>"; };
 		E5A34AB9260531EA000F60BB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				E5A383982604C24D00EC70C1 /* MainViewController.swift */,
 				E5A34AB9260531EA000F60BB /* CustomTableViewCell.swift */,
 				E569A1AF26079CD70062492B /* NewPonyTableViewController.swift */,
+				E5105A8D260F2FE3000232CC /* RatingControl.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				E569A1AD260786090062492B /* PonyModel.swift in Sources */,
 				E5A34ABA260531EA000F60BB /* CustomTableViewCell.swift in Sources */,
 				E569A1B026079CD70062492B /* NewPonyTableViewController.swift in Sources */,
+				E5105A8E260F2FE3000232CC /* RatingControl.swift in Sources */,
 				E5BE8101255D47FA007EE47E /* ViewController.swift in Sources */,
 				E5BE80FD255D47FA007EE47E /* AppDelegate.swift in Sources */,
 				E5BE80FF255D47FA007EE47E /* SceneDelegate.swift in Sources */,

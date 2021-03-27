@@ -10,7 +10,7 @@ import UIKit
 
 class NewPonyTableViewController: UITableViewController {
     
-    var currentPony: Pony?
+    var currentPony: Pony!
     var imageIsChanged = false
     
     @IBOutlet var saveButton: UIBarButtonItem!
@@ -19,11 +19,16 @@ class NewPonyTableViewController: UITableViewController {
     @IBOutlet var ponyName: UITextField!
     @IBOutlet var ponyLocation: UITextField!
     @IBOutlet var ponyType: UITextField!
+    @IBOutlet var ratingControl: RatingControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0,
+                                                         y: 0,
+                                                         width: tableView.frame.size.width,
+                                                         height: 1))
         saveButton.isEnabled = false
         ponyName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         setupEditScreen()
@@ -78,13 +83,16 @@ class NewPonyTableViewController: UITableViewController {
         let newPony = Pony(name: ponyName.text!,
                            location: ponyLocation.text!,
                            type: ponyType.text!,
-                           imageData: imageData)
+                           imageData: imageData,
+                           rating: Double(ratingControl.rating))
+        
         if currentPony != nil {
             try! realm.write {
                 currentPony?.name = newPony.name
                 currentPony?.location = newPony.location
                 currentPony?.type = newPony.type
                 currentPony?.imageData = newPony.imageData
+                currentPony?.rating = newPony.rating
             }
         } else {
             StorageManager.saveObject(newPony)
@@ -104,6 +112,7 @@ class NewPonyTableViewController: UITableViewController {
             ponyName.text = currentPony?.name
             ponyLocation.text = currentPony?.location
             ponyType.text = currentPony?.type
+            ratingControl.rating = Int(currentPony.rating)
         }
     }
     
