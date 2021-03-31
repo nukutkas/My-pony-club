@@ -12,8 +12,10 @@
 		E5105A8E260F2FE3000232CC /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5105A8D260F2FE3000232CC /* RatingControl.swift */; };
 		E569A1AD260786090062492B /* PonyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569A1AC260786090062492B /* PonyModel.swift */; };
 		E569A1B026079CD70062492B /* NewPonyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E569A1AF26079CD70062492B /* NewPonyTableViewController.swift */; };
+		E583B372260F885700BE43F3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E583B371260F885700BE43F3 /* CloudKit.framework */; };
 		E5A34ABA260531EA000F60BB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A34AB9260531EA000F60BB /* CustomTableViewCell.swift */; };
 		E5A383992604C24D00EC70C1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A383982604C24D00EC70C1 /* MainViewController.swift */; };
+		E5AEADD42614615F00730686 /* CloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AEADD32614615F00730686 /* CloudManager.swift */; };
 		E5BE80FD255D47FA007EE47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BE80FC255D47FA007EE47E /* AppDelegate.swift */; };
 		E5BE80FF255D47FA007EE47E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BE80FE255D47FA007EE47E /* SceneDelegate.swift */; };
 		E5BE8101255D47FA007EE47E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BE8100255D47FA007EE47E /* ViewController.swift */; };
@@ -30,8 +32,11 @@
 		E5105A8D260F2FE3000232CC /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		E569A1AC260786090062492B /* PonyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PonyModel.swift; sourceTree = "<group>"; };
 		E569A1AF26079CD70062492B /* NewPonyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPonyTableViewController.swift; sourceTree = "<group>"; };
+		E583B36F260F880C00BE43F3 /* My pony club.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "My pony club.entitlements"; sourceTree = "<group>"; };
+		E583B371260F885700BE43F3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E5A34AB9260531EA000F60BB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		E5A383982604C24D00EC70C1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E5AEADD32614615F00730686 /* CloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudManager.swift; sourceTree = "<group>"; };
 		E5BE80F9255D47FA007EE47E /* My pony club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My pony club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5BE80FC255D47FA007EE47E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5BE80FE255D47FA007EE47E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C02EE1DA1A20B6CD5DE00068 /* Pods_My_pony_club.framework in Frameworks */,
+				E583B372260F885700BE43F3 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +63,7 @@
 		6E551554CF03F7D65498EBD9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E583B371260F885700BE43F3 /* CloudKit.framework */,
 				5B08BA2592A860ED70EFDE82 /* Pods_My_pony_club.framework */,
 			);
 			name = Frameworks;
@@ -71,9 +78,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E583B36B260F70BC00BE43F3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E5105A8D260F2FE3000232CC /* RatingControl.swift */,
+				E50B6F75260A589E008A6100 /* StorageManager.swift */,
+				E5AEADD32614615F00730686 /* CloudManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E5934CB5257C18220010FC75 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				E583B36F260F880C00BE43F3 /* My pony club.entitlements */,
 				E5BE80FC255D47FA007EE47E /* AppDelegate.swift */,
 				E5BE80FE255D47FA007EE47E /* SceneDelegate.swift */,
 				E5BE810A255D47FC007EE47E /* Info.plist */,
@@ -105,7 +123,6 @@
 				E5A383982604C24D00EC70C1 /* MainViewController.swift */,
 				E5A34AB9260531EA000F60BB /* CustomTableViewCell.swift */,
 				E569A1AF26079CD70062492B /* NewPonyTableViewController.swift */,
-				E5105A8D260F2FE3000232CC /* RatingControl.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -114,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				E569A1AC260786090062492B /* PonyModel.swift */,
-				E50B6F75260A589E008A6100 /* StorageManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				E5934CBC257C1BA40010FC75 /* ViewControllers */,
+				E583B36B260F70BC00BE43F3 /* Helpers */,
 				E5934CBF257C1DF10010FC75 /* Models */,
 				E5934CB9257C19E50010FC75 /* Storyboards */,
 				E5934CB5257C18220010FC75 /* Supporting files */,
@@ -269,6 +286,7 @@
 				E5A34ABA260531EA000F60BB /* CustomTableViewCell.swift in Sources */,
 				E569A1B026079CD70062492B /* NewPonyTableViewController.swift in Sources */,
 				E5105A8E260F2FE3000232CC /* RatingControl.swift in Sources */,
+				E5AEADD42614615F00730686 /* CloudManager.swift in Sources */,
 				E5BE8101255D47FA007EE47E /* ViewController.swift in Sources */,
 				E5BE80FD255D47FA007EE47E /* AppDelegate.swift in Sources */,
 				E5BE80FF255D47FA007EE47E /* SceneDelegate.swift in Sources */,
@@ -419,6 +437,7 @@
 			baseConfigurationReference = 176813F3EEABFE9E12171EBC /* Pods-My pony club.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "My pony club/Supporting files/My pony club.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z4HK5Y82J4;
 				INFOPLIST_FILE = "My pony club/Supporting files/Info.plist";
@@ -427,7 +446,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "nikko.My-pony-club";
+				PRODUCT_BUNDLE_IDENTIFIER = "nikko.My-pony-clubCloud";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -439,6 +458,7 @@
 			baseConfigurationReference = 87D54E43724FA6F7D42DAFA3 /* Pods-My pony club.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "My pony club/Supporting files/My pony club.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z4HK5Y82J4;
 				INFOPLIST_FILE = "My pony club/Supporting files/Info.plist";
@@ -447,7 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "nikko.My-pony-club";
+				PRODUCT_BUNDLE_IDENTIFIER = "nikko.My-pony-clubCloud";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

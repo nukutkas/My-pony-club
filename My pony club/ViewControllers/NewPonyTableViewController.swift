@@ -70,15 +70,9 @@ class NewPonyTableViewController: UITableViewController {
     
     func savePony() {
         
-        var image: UIImage?
+        guard let image = imageIsChanged ? ponyImage.image : #imageLiteral(resourceName: "imagePlaceholder") else { return }
         
-        if imageIsChanged {
-            image = ponyImage.image
-        } else {
-            image = #imageLiteral(resourceName: "imagePlaceholder")
-        }
-        
-        let imageData = image?.pngData()
+        let imageData = image.pngData()
         
         let newPony = Pony(name: ponyName.text!,
                            location: ponyLocation.text!,
@@ -95,6 +89,7 @@ class NewPonyTableViewController: UITableViewController {
                 currentPony?.rating = newPony.rating
             }
         } else {
+            CloudManager.saveDataToCloud(pony: newPony, with: image)
             StorageManager.saveObject(newPony)
         }
     }
@@ -112,7 +107,7 @@ class NewPonyTableViewController: UITableViewController {
             ponyName.text = currentPony?.name
             ponyLocation.text = currentPony?.location
             ponyType.text = currentPony?.type
-            ratingControl.rating = Int(currentPony.rating)
+            ratingControl.rating = currentPony.rating
         }
     }
     

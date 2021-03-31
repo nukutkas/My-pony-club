@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import Cosmos
 
 class CustomTableViewCell: UITableViewCell {
     
-    @IBOutlet var imageOfPony: UIImageView!
+    @IBOutlet var imageOfPony: UIImageView! {
+        didSet {
+            imageOfPony.layer.cornerRadius = imageOfPony.frame.size.height / 2
+            imageOfPony.clipsToBounds = true
+        }
+    }
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
+    @IBOutlet var cosmosView: CosmosView! {
+        didSet {
+            cosmosView.settings.updateOnTouch = false
+        }
+    }
 }

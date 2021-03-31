@@ -12,6 +12,12 @@ import UIKit
     
     // MARK: Properties
     
+    var rating = 0.0 {
+        didSet {
+            updateButtonSelectionState()
+        }
+    }
+    
     private var ratingButtons = [UIButton]()
     
     @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
@@ -27,11 +33,6 @@ import UIKit
     }
     
     
-    var rating = 0 {
-        didSet {
-            updateButtonSelectionState()
-        }
-    }
     
     // MARK: Initiazilation
     override init(frame: CGRect) {
@@ -50,7 +51,7 @@ import UIKit
         guard let index = ratingButtons.firstIndex(of: button) else { return }
         
         // Calculate the rating of the selected button
-        let selectedRating = index + 1
+        let selectedRating = Double(index + 1)
         
         if selectedRating == rating {
             rating = 0
@@ -120,7 +121,7 @@ import UIKit
     
     private func updateButtonSelectionState() {
         for (index, button) in ratingButtons.enumerated() {
-            button.isSelected = index < rating
+            button.isSelected = Double(index) < rating
         }
     }
     

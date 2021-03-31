@@ -7,6 +7,7 @@
 //
 
 import RealmSwift
+import CloudKit
 
 class Pony: Object {
     @objc dynamic var name = ""
@@ -25,4 +26,16 @@ class Pony: Object {
         self.rating = rating
     }
     
+    convenience init(record: CKRecord) {
+        self.init()
+        guard let possibleImage = record.value(forKey: "imageData") else { return }
+        let imageAsset = possibleImage as! CKAsset
+        guard let imageData = try? Data(contentsOf: imageAsset.fileURL!) else { return }
+        
+        self.name = record.value(forKey: "name") as! String
+        self.location = record.value(forKey: "location") as? String
+        self.type = record.value(forKey: "type") as? String
+        self.imageData = imageData
+        self.rating = record.value(forKey: "rating") as! Double
+    }
 }

@@ -41,6 +41,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationItem.searchController = searchController
         definesPresentationContext = true
         
+        CloudManager.fetchDataFromCloud { (pony) in
+            StorageManager.saveObject(pony)
+            self.tableView.reloadData()
+        }
+        
     }
 
     // MARK: - Table view data source
@@ -50,29 +55,21 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         if isFiltering {
             return filteredPonies.count
         }
-        return ponies.isEmpty ? 0 : ponies.count
+        return  ponies.count
     }
 
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         
-        var pony = Pony()
-        
-        if isFiltering {
-            pony = filteredPonies[indexPath.row]
-        } else {
-            pony = ponies[indexPath.row]
-        }
+        let pony = isFiltering ? filteredPonies[indexPath.row] : ponies[indexPath.row]
 
         cell.nameLabel?.text = pony.name
         cell.locationLabel.text = pony.location
         cell.typeLabel.text = pony.type
         cell.imageOfPony.image = UIImage(data: pony.imageData!)
+        cell.cosmosView.rating = pony.rating
        
-        cell.imageOfPony?.layer.cornerRadius = cell.imageOfPony.frame.size.height / 2
-        cell.imageOfPony?.clipsToBounds = true
-
         return cell
     }
     
@@ -97,12 +94,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            let pony: Pony
-            if isFiltering {
-                pony = filteredPonies[indexPath.row]
-            } else {
-                pony = ponies[indexPath.row]
-            }
+            
+            let pony = isFiltering ? filteredPonies[indexPath.row] : ponies[indexPath.row]
             
             let newPonyVC = segue.destination as! NewPonyTableViewController
             newPonyVC.currentPony = pony
